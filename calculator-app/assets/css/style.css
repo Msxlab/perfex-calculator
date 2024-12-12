@@ -1,0 +1,178 @@
+/* Dark Theme Variables */
+:root {
+    --primary: #0ea5e9;
+    --primary-dark: #0284c7;
+    --secondary: #64748b;
+    --dark-bg: #0f172a;
+    --dark-surface: #1e293b;
+    --dark-border: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* Cards */
+.card {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+}
+
+.card.bg-dark-subtle {
+    background-color: var(--dark-surface) !important;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-secondary);
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary-dark);
+    background: rgba(14, 165, 233, 0.1);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary);
+    background: transparent;
+    border-bottom-color: var(--primary);
+}
+
+/* Forms */
+.form-control, .form-select {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+    color: var(--text-primary);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--dark-surface);
+    border-color: var(--primary);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25);
+}
+
+/* Tables */
+.table {
+    color: var(--text-primary);
+}
+
+.table thead th {
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: rgba(30, 41, 59, 0.5);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Progress Bar */
+.progress {
+    background-color: var(--dark-surface);
+}
+
+.progress-bar {
+    background-color: var(--primary);
+}
+
+/* Utilities */
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+/* Animations */
+.fade {
+    transition: opacity 0.15s linear;
+}
+
+.tab-pane.fade {
+    transform: translateY(20px);
+    transition: all 0.2s ease-in-out;
+}
+
+.tab-pane.fade.show {
+    transform: translateY(0);
+}
+
+/* Card Hover Effects */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Input Groups */
+.input-group-text {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+    color: var(--text-secondary);
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+}
+
+.modal-header {
+    border-bottom-color: var(--dark-border);
+}
+
+.modal-footer {
+    border-top-color: var(--dark-border);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-tabs .nav-link {
+        padding: 0.75rem;
+    }
+    
+    .d-flex.border-bottom {
+        overflow-x: auto;
+    }
+}
